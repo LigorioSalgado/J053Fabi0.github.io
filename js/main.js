@@ -1,5 +1,5 @@
 (function () {
-  var dificultad = 3;
+  var dificultad = 4;
 
   var d = new URLSearchParams(window.location.search).get("d");
   if (d && !isNaN(parseInt(d))) {

@@ -64,8 +64,8 @@ footer {
 
 footer button {
   background-color: blue;
-  height: 40px;
-  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
   color: white;
   border-radius: 50%;
   margin-left: 10px;
@@ -77,4 +77,15 @@ footer button {
 footer button:hover {
   cursor: pointer;
   filter: brightness(0.9);
+}
+
+@media only screen and (max-width: 561px) {
+  #color_to_guess {
+    font-size: 30px;
+    -webkit-text-stroke: 1px white; /* width and color */
+  }
+
+  .color {
+    flex-direction: column;
+  }
 }
