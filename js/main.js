@@ -15,7 +15,7 @@
 
   document.getElementById(
     "color_to_guess"
-  ).innerHTML = `Selecciona el color que sea:<br><b style="color: red;">R</b><b style="color: green;">G</b><b style="color: blue;">B</b>: <b style="color: red;">${red}</b>, <b style="color: green;">${green}</b>, <b style="color: blue;">${blue}</b>.`;
+  ).innerHTML = `Selecciona el color:<br><b style="color: red;">R</b><b style="color: green;">G</b><b style="color: blue;">B</b>: <b style="color: red;">${red}</b>, <b style="color: green;">${green}</b>, <b style="color: blue;">${blue}</b>.`;
 
   function hizoClick(element) {
     var tarjeta = document.getElementById(element.target.id);
