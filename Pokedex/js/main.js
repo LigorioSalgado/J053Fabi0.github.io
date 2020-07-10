@@ -10,21 +10,22 @@ var from = 0;
     loadCards(document.getElementById("aquiVanTodos"), 0, to);
   });
 
+  // Cargo las primeras cartas
   var contenedor = document.getElementById("aquiVanTodos");
   await loadCards(contenedor, from, to);
 
   // Esto detecta cuando llegas al fondo de la página y que el botón de cancelar búsqueda esté escondido
-  window.onscroll = function (ev) {
+  window.onscroll = function () {
     if (
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight &&
       document.getElementById("cancelSearch").style.display == "none"
     ) {
-      // Entonces carga de nuevo los pokemons
+      // Entonces carga unos nuevos pokemons
       from = to;
       to = 30 + to > pokemons.length ? pokemons.length : 30 + to;
       loadCards(contenedor, from, to);
 
-      // Si llegamos al final, escondemos el cargador.
+      // Si llegamos al final de la lista de pokemons, escondemos el cargador.
       if (to == pokemons.length) {
         document.getElementById("spinnerDelFondo").style.visibility = "hidden";
       }
@@ -39,6 +40,7 @@ var from = 0;
   });
 })();
 
+// Esto carga cartas de from hasta to
 function loadCards(contenedor, from, to) {
   for (var i = from; i < to; i++) {
     var pokemon = pokemons[i];
@@ -46,6 +48,7 @@ function loadCards(contenedor, from, to) {
   }
 }
 
+// Esto añade una sola carta al contenedor
 function addPokemon(contenedor, pokemon) {
   var types = "";
   pokemon.type.forEach((item) => {
@@ -130,7 +133,7 @@ function search() {
     document.getElementById("alerta_titulo").innerHTML =
       "La búsqueda es demasiado corta";
     document.getElementById("alerta_mensaje").innerHTML =
-      "Intenta usar por lo menos dos caracteres de búsqueda.";
+      "Intenta usar por lo menos dos caracteres en tu búsqueda.";
     $("#alerta").modal();
     return;
   }
