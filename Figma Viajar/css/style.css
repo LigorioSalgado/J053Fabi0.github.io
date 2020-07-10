@@ -1,0 +1,197 @@
+html, body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #B9D7F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a, header a img {
+  height: 100%;
+  margin: 10px;
+}
+
+header a img {
+  height: 70px;
+}
+
+nav a {
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+nav a:first-child {
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav {
+  margin-right: 40px;
+}
+
+#inicio h1 {
+  font-size: 55px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#inicio h2 {
+  font-size: 35px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+button {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #D3E7F7;
+  line-height: 33px;
+  background: linear-gradient(180deg, rgba(146, 182, 208, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #1A264E;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+#viajar_ahora {
+  width: 239px;
+  height: 94px;
+  font-size: 28px;
+
+  margin-top: 20px;
+}
+
+#inicio, #formulario {
+  background-color: #A9C7E1;
+}
+
+#inicio {
+  background-image: url("../assets/back.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+
+  padding-left: 50px;
+
+  height: 85%;
+}
+
+#beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 100%;
+  align-items: center;
+  padding: 50px 30px 50px 30px;
+}
+
+.card img {
+  height: 110px;
+}
+
+.card p {
+  text-align: center;
+  font-size: 15px;
+  margin: -20px 0px 0px 0px;
+}
+
+.card h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.card {
+  width: 19%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 60px 0px 60px;
+}
+
+@media screen and (max-width:805px) {
+  header nav a {
+    display: none;
+  }
+
+  #inicio {
+    background-image: none;
+    align-items: center;
+    padding-left: 15px;
+  }
+
+  #inicio h1{
+    font-size: 60px;
+  }
+
+  #inicio h2{
+    font-size: 40px;
+  }
+}
+
+#formulario {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+}
+
+#formulario h1 {
+  width: 45%;
+  text-align: center;
+  font-size: 60px;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid black;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input:focus {
+  padding-bottom: 0px;
+  padding-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+}
+
+@media screen and (max-width:897px) {
+  .card {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}

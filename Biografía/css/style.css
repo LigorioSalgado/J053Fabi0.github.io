@@ -1,0 +1,56 @@
+* { 
+  padding:0px; 
+  margin: 0px; 
+} 
+
+header {
+  background-color: azure;
+  padding: 50px;
+  max-height: 80px;
+}
+
+header, section, .title {
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-top: -10px;
+}
+
+header * {
+ display: inline-block;
+ overflow: auto;
+ text-align: center;
+}
+
+section {
+  background-color: azure;
+  display: inline-block;
+  margin: 10px 0px 0px 10px;
+  padding: 30px;
+}
+
+#profile {
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.title {
+  background-color: azure;
+  margin: 10px 10px 0px 10px;
+  padding: 20px;
+}
+
+ol {
+  margin-top: 20px;
+  margin-left: 23px;
+}
+
+body {
+  margin: 0px;
+  padding: 10px;
+  background-color: purple;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

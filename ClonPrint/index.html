@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tseretnirp</title>
+    <link  rel="shortcut icon" href="./src/logo.png" type="image/png" />
+    <title>Tseretnirp</title>
+    <meta name="description" content="Una copia pirata del Printerest" />
+    <meta name="robots" content="index, follow">
+
+    <!-- El favicon de la página -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./src/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./src/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./src/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./src/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./src/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./src/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./src/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./src/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./src/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./src/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./src/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./src/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <div class="icon" id="logo" style="background-image: url('./src/logo.png');">
+            <div class="hover_circulo"></div>
+        </div>
+        <button id="btn_seleccionado" style="display: flex;">
+        Inicio<img
+          class="hidden"
+          style="width: 20px; height: 20px; margin-right: 0px;"
+          src="./src/abajo2.png"
+        />
+      </button>
+        <button>Hoy</button>
+        <button>Siguiendo</button>
+        <div id="barra">
+            <img src="./src/search.png" style="margin-right: 5px; margin-left: 5px;" />
+            <input type="text" placeholder="Buscar" />
+        </div>
+        <div class="hidden" id="separator"></div>
+
+        <div class="icon hidden" style="background-image: url('./src/search.png'); min-height:26px;"></div>
+
+        <div class="icon" id="notificacion" style="background-image: url(./src/notificacion.png);">
+            <div class="hover_circulo"></div>
+        </div>
+
+        <div class="icon" id="mensajes" style="background-image: url(./src/mensaje.png);">
+            <div class="hover_circulo"></div>
+        </div>
+
+        <img id="perfil" src="./src/perfil.png"></div>
+        <div id="abajoflecha" class="icon" style="background-image: url('./src/abajo.png');">
+            <div class="hover_circulo"></div>
+        </div>
+    </header>
+
+    <div id="fake_header"></div>
+
+    <div class="flotante" id="flotante1"></div>
+    <div class="flotante" id="flotante2"></div>
+    <main>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/01.jpg');">
+                <img src="./src/01.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/02.jpg');">
+                <img src="./src/02.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/03.jpg');">
+                <img src="./src/03.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/04.jpg');">
+                <img src="./src/04.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/05.jpg');">
+                <img src="./src/05.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/50.jpg');">
+                <img src="./src/50.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/07.jpg');">
+                <img src="./src/07.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/08.jpg');">
+                <img src="./src/08.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/09.jpg');">
+                <img src="./src/09.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/10.jpg');">
+                <img src="./src/10.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/11.jpg');">
+                <img src="./src/11.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/13.jpg');">
+                <img src="./src/13.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/14.jpg');">
+                <img src="./src/14.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/15.jpg');">
+                <img src="./src/15.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/16.jpg');">
+                <img src="./src/16.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/17.jpg');">
+                <img src="./src/17.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/18.jpg');">
+                <img src="./src/18.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/19.jpg');">
+                <img src="./src/19.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/20.jpg');">
+                <img src="./src/20.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/21.jpg');">
+                <img src="./src/21.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/22.jpg');">
+                <img src="./src/22.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/23.jpg');">
+                <img src="./src/23.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/24.jpg');">
+                <img src="./src/24.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/25.jpg');">
+                <img src="./src/25.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/26.jpg');">
+                <img src="./src/26.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/27.jpg');">
+                <img src="./src/27.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/28.jpg');">
+                <img src="./src/28.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/29.jpg');">
+                <img src="./src/29.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/30.jpg');">
+                <img src="./src/30.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/31.jpg');">
+                <img src="./src/31.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/32.jpg');">
+                <img src="./src/32.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/33.jpg');">
+                <img src="./src/33.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/34.jpg');">
+                <img src="./src/34.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/35.jpg');">
+                <img src="./src/35.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/36.jpg');">
+                <img src="./src/36.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/37.jpg');">
+                <img src="./src/37.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/38.jpg');">
+                <img src="./src/38.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/39.jpg');">
+                <img src="./src/39.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/40.jpg');">
+                <img src="./src/40.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/41.jpg');">
+                <img src="./src/41.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/12.jpg');">
+                <img src="./src/12.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <div class="imagen" style="background-image: url('./src/42.jpg');">
+                <img src="./src/42.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/43.jpg');">
+                <img src="./src/43.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/44.jpg');">
+                <img src="./src/44.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/45.jpg');">
+                <img src="./src/45.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/46.jpg');">
+                <img src="./src/46.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/47.jpg');">
+                <img src="./src/47.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            <div class="imagen" style="background-image: url('./src/48.jpg');">
+                <img src="./src/48.jpg" alt="" />
+                <button class="guardar">Guardar</button>
+                <div class="share_buttons">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

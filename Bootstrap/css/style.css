@@ -1,0 +1,28 @@
+.cartas-comida {
+  width: 20rem;
+  margin: 2rem;
+}
+
+.cartas-comida2 {
+  width: 30%;
+}
+
+.fix-tamanio {
+  height: 5rem;
+}
+
+#rojo {
+  background-color: red;
+}
+
+#verde {
+  background-color: green;
+}
+
+#negro {
+  background-color: black;
+}
+
+#amarillo {
+  background-color: yellow;
+}

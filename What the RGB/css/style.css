@@ -1,7 +1,7 @@
 html,
 body {
   width: 100%;
-  font-family: sans;
+  font-family: "Share Tech Mono", monospace;
   height: 100%;
   margin: 0px;
   font-weight: bold;
@@ -15,7 +15,7 @@ main {
 
 footer p {
   font-size: 30px;
-  font-family: arial;
+  font-family: "Share Tech Mono", monospace;
   color: black;
   -webkit-text-stroke: 1px white; /* width and color */
   text-align: center;
@@ -83,9 +83,5 @@ footer button:hover {
   #color_to_guess {
     font-size: 30px;
     -webkit-text-stroke: 1px white; /* width and color */
-  }
-
-  .color {
-    flex-direction: column;
   }
 }
