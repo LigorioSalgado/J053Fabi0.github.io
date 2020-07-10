@@ -7,7 +7,9 @@ var from = 0;
     document.getElementById("cancelSearch").style.display = "none";
     document.getElementById("aquiVanTodos").innerHTML = "";
     document.getElementById("buscar").value = "";
-    loadCards(document.getElementById("aquiVanTodos"), 0, to);
+    loadCards(document.getElementById("aquiVanTodos"), 0, 60);
+    to = 90;
+    from = 60;
   });
 
   // Cargo las primeras cartas
