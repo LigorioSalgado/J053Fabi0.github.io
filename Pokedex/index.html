@@ -145,10 +145,11 @@
             placeholder="Name or ID"
             aria-label="Search"
             id="buscar"
+            oninput="search(false)"
           />
           <button
             class="btn btn-outline-secondary my-2 my-sm-0"
-            onclick="search()"
+            onclick="search(true)"
           >
             Search
           </button>

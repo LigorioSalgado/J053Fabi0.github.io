@@ -3,19 +3,18 @@ var from = 0;
 var temp = "";
 (function () {
   // Añado un event listener al botón de cancelar búsqueda
-  document.getElementById("cancelSearch").addEventListener("click", () => {
-    document.getElementById("spinnerDelFondo").style.visibility = "visible";
-    document.getElementById("cancelSearch").style.display = "none";
-    document.getElementById("buscar").value = "";
-    // Aquí regreso al estado anterior cargando las cartas anteriores
-    document.getElementById("aquiVanTodos").innerHTML = temp;
-  });
+  document
+    .getElementById("cancelSearch")
+    .addEventListener("click", cancelSearchF);
+
+  // Vacío el campo de búsqueda
+  document.getElementById("buscar").value = "";
 
   // Cargo las primeras cartas
   var contenedor = document.getElementById("aquiVanTodos");
   loadCards(contenedor, from, to);
 
-  // Esto detecta cuando llegas al fondo de la página y que el botón de cancelar búsqueda esté escondido
+  // Esto detecta cuando llegas al fondo de la página. El botón de cancelar búsqueda tiene que estar escondido
   window.onscroll = function () {
     if (
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight &&
@@ -36,10 +35,23 @@ var temp = "";
   // Añado el evento de presionar enter a la barra de búsqueda
   document.getElementById("buscar").addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      search();
+      search(true);
     }
   });
 })();
+
+function cancelSearchF() {
+  document.getElementById("spinnerDelFondo").style.visibility = "visible";
+  document.getElementById("cancelSearch").style.display = "none";
+  document.getElementById("buscar").value = "";
+  // Aquí regreso al estado anterior cargando las cartas anteriores
+  if (temp == "") {
+    loadCards(document.getElementById("aquiVanTodos"), from, to);
+  } else {
+    document.getElementById("aquiVanTodos").innerHTML = temp;
+  }
+  temp = "";
+}
 
 // Esto carga cartas de from hasta to
 function loadCards(contenedor, from, to) {
@@ -49,9 +61,10 @@ function loadCards(contenedor, from, to) {
     temp = temp + getPokemonCard(pokemon);
   }
   contenedor.innerHTML = temp;
+  temp = "";
 }
 
-// Esto añade una sola carta al contenedor
+// Esto te devuelve el HTML de una carta del porkemon que quieras
 function getPokemonCard(pokemon) {
   var types = "";
   pokemon.type.forEach((item) => {
@@ -126,19 +139,15 @@ function getPokemonCard(pokemon) {
 `;
 }
 
-function search() {
+function search(givedEnter) {
   var results = [];
   var searchField = document.getElementById("buscar").value.trim();
   var re = new RegExp(searchField, "i");
   var container = document.getElementById("aquiVanTodos");
 
-  // Si la búsqueda no es un número y su longitud es menor a 2, no es recomendable hacer la búsqueda
-  if (searchField.length < 2 && isNaN(parseInt(searchField))) {
-    document.getElementById("alerta_titulo").innerHTML =
-      "La búsqueda es demasiado corta";
-    document.getElementById("alerta_mensaje").innerHTML =
-      "Intenta usar por lo menos dos caracteres en tu búsqueda.";
-    $("#alerta").modal();
+  // Si la búsqueda no es un número y su longitud es menor a 2, no es recomendable hacer la búsqueda porque toma un tiempo
+  if (searchField.length < 2 && isNaN(parseInt(searchField)) && !givedEnter) {
+    if (searchField == "") cancelSearchF();
     return;
   }
 
@@ -160,8 +169,10 @@ function search() {
     document.getElementById("spinnerDelFondo").style.visibility = "hidden";
     document.getElementById("cancelSearch").style.display = "inline-block";
 
-    // Vacío y almaceno las cards en una variable temporal
-    temp = container.innerHTML;
+    // Vacío y almaceno las cards en una variable temporal solo si temp está vacío
+    if (temp == "") {
+      temp = container.innerHTML;
+    }
     container.innerHTML = "";
     for (var i = 0; i < results.length; i++) {
       container.innerHTML =
@@ -170,7 +181,10 @@ function search() {
   } else {
     document.getElementById("alerta_titulo").innerHTML = "Rayos...";
     document.getElementById("alerta_mensaje").innerHTML =
-      "No hemos encontrado nada. Quizá puedas intentarlo de nuevo con otras palabras clave.";
+      "No hemos encontrado nada relacionado con <b>" +
+      searchField +
+      "</b>. Quizá puedas intentarlo de nuevo con otras palabras clave.";
     $("#alerta").modal();
+    cancelSearchF();
   }
 }
