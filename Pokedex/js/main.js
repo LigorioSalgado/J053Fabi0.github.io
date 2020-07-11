@@ -1,20 +1,19 @@
-var to = 60;
+var to = 90;
 var from = 0;
-(async function () {
+var temp = "";
+(function () {
   // Añado un event listener al botón de cancelar búsqueda
   document.getElementById("cancelSearch").addEventListener("click", () => {
     document.getElementById("spinnerDelFondo").style.visibility = "visible";
     document.getElementById("cancelSearch").style.display = "none";
-    document.getElementById("aquiVanTodos").innerHTML = "";
     document.getElementById("buscar").value = "";
-    loadCards(document.getElementById("aquiVanTodos"), 0, 60);
-    to = 90;
-    from = 60;
+    // Aquí regreso al estado anterior cargando las cartas anteriores
+    document.getElementById("aquiVanTodos").innerHTML = temp;
   });
 
   // Cargo las primeras cartas
   var contenedor = document.getElementById("aquiVanTodos");
-  await loadCards(contenedor, from, to);
+  loadCards(contenedor, from, to);
 
   // Esto detecta cuando llegas al fondo de la página y que el botón de cancelar búsqueda esté escondido
   window.onscroll = function () {
@@ -24,7 +23,7 @@ var from = 0;
     ) {
       // Entonces carga unos nuevos pokemons
       from = to;
-      to = 30 + to > pokemons.length ? pokemons.length : 30 + to;
+      to = 90 + to > pokemons.length ? pokemons.length : 90 + to;
       loadCards(contenedor, from, to);
 
       // Si llegamos al final de la lista de pokemons, escondemos el cargador.
@@ -44,14 +43,16 @@ var from = 0;
 
 // Esto carga cartas de from hasta to
 function loadCards(contenedor, from, to) {
+  temp = contenedor.innerHTML;
   for (var i = from; i < to; i++) {
     var pokemon = pokemons[i];
-    addPokemon(contenedor, pokemon);
+    temp = temp + getPokemonCard(pokemon);
   }
+  contenedor.innerHTML = temp;
 }
 
 // Esto añade una sola carta al contenedor
-function addPokemon(contenedor, pokemon) {
+function getPokemonCard(pokemon) {
   var types = "";
   pokemon.type.forEach((item) => {
     var badgeType = "";
@@ -84,9 +85,8 @@ function addPokemon(contenedor, pokemon) {
 
     types = types + `<span class="badge ${badgeType}">${item}</span> `;
   });
-  contenedor.innerHTML =
-    contenedor.innerHTML +
-    `
+
+  return `
   <div class="col">
     <div
       class="card mb-3"
@@ -130,7 +130,9 @@ function search() {
   var results = [];
   var searchField = document.getElementById("buscar").value.trim();
   var re = new RegExp(searchField, "i");
+  var container = document.getElementById("aquiVanTodos");
 
+  // Si la búsqueda no es un número y su longitud es menor a 2, no es recomendable hacer la búsqueda
   if (searchField.length < 2 && isNaN(parseInt(searchField))) {
     document.getElementById("alerta_titulo").innerHTML =
       "La búsqueda es demasiado corta";
@@ -158,9 +160,12 @@ function search() {
     document.getElementById("spinnerDelFondo").style.visibility = "hidden";
     document.getElementById("cancelSearch").style.display = "inline-block";
 
-    document.getElementById("aquiVanTodos").innerHTML = "";
+    // Vacío y almaceno las cards en una variable temporal
+    temp = container.innerHTML;
+    container.innerHTML = "";
     for (var i = 0; i < results.length; i++) {
-      addPokemon(document.getElementById("aquiVanTodos"), pokemons[results[i]]);
+      container.innerHTML =
+        container.innerHTML + getPokemonCard(pokemons[results[i]]);
     }
   } else {
     document.getElementById("alerta_titulo").innerHTML = "Rayos...";
