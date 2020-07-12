@@ -14,10 +14,7 @@
 
     <!-- Primary Meta Tags -->
     <title>Huella de carbono</title>
-    <meta
-      name="title"
-      content="Web interactiva para reducir tu huella de carbono"
-    />
+    <meta name="title" content="Web interactiva para reducir tu huella de carbono" />
     <meta
       name="description"
       content="Selecciona las cosas que puedes o quieres hacer, ¡y verás cómo tu barra de huella de carbono disminuye! "
@@ -25,14 +22,8 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://j053fabi0.github.io/HuellaCarbono"
-    />
-    <meta
-      property="og:title"
-      content="Web interactiva para reducir tu huella de carbono"
-    />
+    <meta property="og:url" content="https://j053fabi0.github.io/HuellaCarbono" />
+    <meta property="og:title" content="Web interactiva para reducir tu huella de carbono" />
     <meta
       property="og:description"
       content="Selecciona las cosas que puedes o quieres hacer, ¡y verás cómo tu barra de huella de carbono disminuye! "
@@ -44,14 +35,8 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://j053fabi0.github.io/HuellaCarbono"
-    />
-    <meta
-      property="twitter:title"
-      content="Web interactiva para reducir tu huella de carbono"
-    />
+    <meta property="twitter:url" content="https://j053fabi0.github.io/HuellaCarbono" />
+    <meta property="twitter:title" content="Web interactiva para reducir tu huella de carbono" />
     <meta
       property="twitter:description"
       content="Selecciona las cosas que puedes o quieres hacer, ¡y verás cómo tu barra de huella de carbono disminuye! "
@@ -62,18 +47,12 @@
     />
   </head>
   <body>
-    <div
-      class="d-flex justify-content-center align-items-center fixed-top"
-      style="width: 100%; background-color: #29ad48; height: 60px;"
-    >
-      <h5 class="mr-4 ml-4" style="color: white; white-space: nowrap;">
+    <div class="d-flex justify-content-center align-items-center fixed-top custom-navbar">
+      <h5 class="mr-4 ml-4" style="color: black; white-space: nowrap;">
         Tu huella de carbono:
       </h5>
       <div style="width: 100%;">
-        <div
-          class="progress border border-white mr-4"
-          style="height: 30px; cursor: help; font-weight: bold;"
-        >
+        <div class="progress border border-dark mr-4" style="height: 30px; cursor: help; font-weight: bold;">
           <div
             class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
             role="progressbar"
@@ -90,7 +69,7 @@
             style="width: 5%; color: black;"
             data-toggle="tooltip"
             data-placement="bottom"
-            title="Este margen surge porque las estimaciones están en rangos, y no cifras certeras."
+            title="Este margen surge porque las estimaciones están en rangos, y no cifras específicas."
           >
             5%
           </div>
@@ -111,68 +90,19 @@
     <div class="jumbotron mt-5">
       <div class="container">
         <h1 class="display-4">¡Reduzcamos nuestras huellas de carbono!</h1>
-        <p class="lead">
-          Te presentamos las formas de luchar contra el cambio climático,
-          basadas en un reciente
-          <a
-            href="https://iopscience.iop.org/article/10.1088/1748-9326/ab8589/pdf"
-            target="_blank"
-          >
-            estudio científico</a
-          >.
+        <p class="lead" style="font-size: 1.75rem;">
+          Te presentamos las formas de luchar contra el cambio climático, basadas en un reciente
+          <a href="https://iopscience.iop.org/article/10.1088/1748-9326/ab8589/pdf" target="_blank"> estudio científico</a>.
         </p>
         <hr class="my-4" />
-        <h5>
-          Selecciona las cosas que puedes o quieres hacer, ¡y verás cómo tu
-          barra de huella de carbono disminuye!
-        </h5>
+        <p class="lead" style="font-size: 1.75rem;">
+          Selecciona las cosas que puedes o quieres hacer, ¡y verás cómo tu barra de huella de carbono disminuye!
+        </p>
       </div>
     </div>
 
-    <div class="container mt-3">
-      <div class="list-group">
-        <h4 class="ml-2">Transporte</h4>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="media">
-            <img
-              src="./src/carros-contaminando.jpg"
-              class="align-self-center mr-3"
-              alt="..."
-            />
-            <div class="media-body">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
-              </div>
-              <p class="mb-1">
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
-              </p>
-              <small>Donec id elit non mi porta.</small>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-          <div class="media">
-            <img
-              src="./src/carros-contaminando.jpg"
-              class="align-self-center mr-3"
-              alt="..."
-            />
-            <div class="media-body">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small>3 days ago</small>
-              </div>
-              <p class="mb-1">
-                Donec id elit non mi porta gravida at eget metus. Maecenas sed
-                diam eget risus varius blandit.
-              </p>
-              <small>Donec id elit non mi porta.</small>
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="container mb-5">
+      <div class="list-group" id="aquiVanCards"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -191,6 +121,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/formas.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
