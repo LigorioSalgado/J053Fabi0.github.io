@@ -14,8 +14,7 @@ const formas = [
       {
         titulo: "Evitar un vuelo corto",
         resumen: "Al evitar un vuelo corto también puedes ayudar a reducir ",
-        resto:
-          "tu huella de carbono. Viajar en coche, camión o tren es mejor, aunque sea menos económico e incluso práctico.",
+        resto: "tu huella de carbono. Viajar en coche, camión o tren es mejor, aunque sea menos económico e incluso práctico.",
         min: 0.2,
         max: 1.5,
         med: 0.6,
@@ -23,8 +22,7 @@ const formas = [
       {
         titulo: "Usar transporte público o alternativa",
         resumen: "Si tienes la oportunidad de ir en vicicleta o en ",
-        resto:
-          "transporte público, puedes reducir drásticamente tus emisiones de carbono.",
+        resto: "transporte público, puedes reducir drásticamente tus emisiones de carbono.",
         min: 0.6,
         max: 1,
         med: 0.8,
@@ -50,8 +48,7 @@ const formas = [
       {
         titulo: "Evitar un vuelo corto",
         resumen: "Al evitar un vuelo corto también puedes ayudar a reducir ",
-        resto:
-          "tu huella de carbono. Viajar en coche, camión o tren es mejor, aunque sea menos económico e incluso práctico.",
+        resto: "tu huella de carbono. Viajar en coche, camión o tren es mejor, aunque sea menos económico e incluso práctico.",
         min: 0.2,
         max: 1.5,
         med: 0.6,
@@ -123,25 +120,27 @@ const formas = [
     categoria: "Dieta",
     cards: [
       {
-        titulo: "",
-        resumen: "",
-        resto: "",
-        min: 0,
-        max: 1,
-        med: 1,
+        titulo: "Seguir una dieta saludable",
+        resumen: "Una dieta saludable tiene menos carnes rojas y procesados. ",
+        resto:
+          "Básicamente es hacerle caso a los nutricionistas. La ganadería contamina mucho, y reducir el consumo de canes ayudará a contaminar menos.",
+        min: 0.01,
+        max: 1.3,
+        med: 0.3,
       },
       {
-        titulo: "",
-        resumen: "",
-        resto: "",
-        min: 0,
-        max: 1,
-        med: 1,
+        titulo: "Dieta vegana",
+        resumen: "Nada de producto animal.",
+        resto:
+          " Al contrario de lo que muchos piensan, los nutricionistas no han encontrado que una dieta vegana repercuta negativamente en la salud, pero solo si se sigue correctamente. Si planeas intentar esto, es recomendable acudir a un profesional.",
+        min: 0.4,
+        max: 2.1,
+        med: 0.9,
       },
       {
-        titulo: "",
-        resumen: "",
-        resto: "",
+        titulo: "Dieta vegetariana",
+        resumen: "Sustituír la carne por insectos u alternativas vegetales. ",
+        resto: "Los insectos pueden proporcinar hasta 4 veces la cantidad de proteína que la carne, y son ",
         min: 0,
         max: 1,
         med: 1,

@@ -95,6 +95,7 @@ function getCard(card, index) {
 `;
 }
 
+// Esta función hace que el botón expandir cambie o no de tamaño
 function expandir(id) {
   var btn = document.getElementById(id);
   console.log(btn.innerHTML.trim());
