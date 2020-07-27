@@ -53,9 +53,7 @@
       }, 1000);
     }
 
-    document
-      .getElementById(element.target.id)
-      .removeEventListener("click", hizoClick);
+    document.getElementById(element.target.id).removeEventListener("click", hizoClick);
   }
 
   for (i = 0; i < dificultad; i++) {

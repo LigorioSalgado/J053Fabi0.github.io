@@ -42,7 +42,7 @@ header {
 }
 
 #privacidad a {
-  color: gray;
+  color: rgb(255, 0, 0);
   margin-right: 30px;
   text-decoration: none;
   font-size: 10px;

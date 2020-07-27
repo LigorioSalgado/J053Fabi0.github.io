@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <p id="Hola">This is a Heading</p>
+
+    <script>
+      var texto = "¡A";
+      for (var i = 0; i < 2048 * 1; i++) {
+        if (texto.length >= 2048) {
+          break;
+        }
+        texto = texto + "h";
+      }
+      document.getElementById("Hola").innerHTML = texto;
+    </script>
+  </body>
+</html>

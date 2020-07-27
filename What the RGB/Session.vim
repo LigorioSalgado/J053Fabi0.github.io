@@ -2,13 +2,14 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Desktop/Actividades\ Master/Clone-Duckduckgo
+cd ~/Desktop/Actividades\ Master/What\ the\ RGB
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 badd +0 index.html
-badd +33 css/style.css
+badd +0 css/style.css
+badd +0 js/main.js
 argglobal
 %argdel
 $argadd index.html
@@ -31,14 +32,14 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 28 - ((27 * winheight(0) + 14) / 29)
+let s:l = 1 - ((0 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-28
+1
 normal! 0
-lcd ~/Desktop/Actividades\ Master/Clone-Duckduckgo
-tabedit ~/Desktop/Actividades\ Master/Clone-Duckduckgo/css/style.css
+lcd ~/Desktop/Actividades\ Master/What\ the\ RGB
+tabedit ~/Desktop/Actividades\ Master/What\ the\ RGB/css/style.css
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -56,13 +57,38 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 33 - ((13 * winheight(0) + 14) / 28)
+let s:l = 1 - ((0 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-33
-normal! 09|
-tabnext 2
+1
+normal! 0
+lcd ~/Desktop/Actividades\ Master/What\ the\ RGB
+tabedit ~/Desktop/Actividades\ Master/What\ the\ RGB/js/main.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 27 - ((26 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+27
+normal! 0
+tabnext 3
 set stal=1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
