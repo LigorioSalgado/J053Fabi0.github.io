@@ -92,18 +92,16 @@ class Tree {
         currentNode = copyRoot;
         do {
           // Debe ser un do while, porque quiero que se corra el código siempre aunque sea una vez
-          if (steps.length != 1) {
-            for (var i = 1; i < steps.length; i++) {
-              var item = steps[i];
-              if (currentNode.left) {
-                if (currentNode.left.dato == item) {
-                  currentNode = currentNode.left;
-                }
-              } else if (currentNode.right) {
-                currentNode = currentNode.right;
-              } else {
-                steps.pop();
+          for (var i = 1; i < steps.length; i++) {
+            var item = steps[i];
+            if (currentNode.left) {
+              if (currentNode.left.dato == item) {
+                currentNode = currentNode.left;
               }
+            } else if (currentNode.right) {
+              currentNode = currentNode.right;
+            } else {
+              steps.pop();
             }
           }
 
