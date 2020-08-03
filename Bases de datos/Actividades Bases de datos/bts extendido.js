@@ -161,3 +161,28 @@ console.log("¿Pero C y A? R: " + sonIguales(a, c));
 console.log("\nLa cantidad de hojas del arbol son: " + a.getCountElements());
 console.log("\nEste es el arbol cortado hasta 2 niveles:\n" + JSON.stringify(a.getElementsFromLevel(2), null, 3));
 console.log("\nEl arbol transformado a array: [" + a.getElementsArray() + "]");
+
+// Output:
+// ¿A y B son iguales? R: true
+// ¿Pero C y A? R: false
+
+// La cantidad de hojas del arbol son: 15
+
+// Este es el arbol cortado hasta 2 niveles:
+// {
+//    "root": {
+//       "dato": 20,
+//       "left": {
+//          "dato": 13,
+//          "left": null,
+//          "right": null
+//       },
+//       "right": {
+//          "dato": 32,
+//          "left": null,
+//          "right": null
+//       }
+//    }
+// }
+
+// El arbol transformado a array: [20,13,9,6,10,18,14,19,32,26,24,29,36,34,40]
