@@ -46,13 +46,13 @@ class Graph {
     for (var i = 0; i < totalNodes; i++) {
       var temp = [];
       for (var j = 0; j < totalNodes; j++) {
-        var toPush = 0;
-        this.edges.forEach((edge) => {
-          if (edge[0].value == this.nodes[i].value && edge[1].value == this.nodes[j].value) {
-            toPush = 1;
+        temp.push(0);
+        for (var k = 0; k < this.edges.length; k++) {
+          if (this.edges[k][0].value == this.nodes[i].value && this.edges[k][1].value == this.nodes[j].value) {
+            temp[j] = 1;
+            break;
           }
-        });
-        temp.push(toPush);
+        }
       }
       matrix.push(temp);
     }
@@ -62,8 +62,8 @@ class Graph {
 
 const mygrafo = new Graph();
 
-[3, 4, 0, 1, 2].forEach((item) => {
-  mygrafo.addNode(item);
+[3, 4, 0, 1, 2].forEach((node) => {
+  mygrafo.addNode(node);
 });
 
 [
