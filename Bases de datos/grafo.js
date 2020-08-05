@@ -40,8 +40,8 @@ class Graph {
     }
   }
 
-  getMatrix() {
-    const totalNodes = this.nodes.length;
+  getMatrix() { //Genial que lo hayas hecho un metedo y no una funcion aparte buena forma de verlo
+    const totalNodes = this.nodes.length; //
     var matrix = [];
     for (var i = 0; i < totalNodes; i++) {
       var temp = [];
@@ -50,7 +50,7 @@ class Graph {
         for (var k = 0; k < this.edges.length; k++) {
           if (this.edges[k][0].value == this.nodes[i].value && this.edges[k][1].value == this.nodes[j].value) {
             temp[j] = 1;
-            break;
+            break;//quizas es demasiado rudo aca quizas podrias forzar al cierre de for asignado  k = this.edges.length
           }
         }
       }
