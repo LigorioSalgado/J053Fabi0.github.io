@@ -63,10 +63,11 @@ class Tree {
   }
 
   getCopy() {
-    return JSON.parse(JSON.stringify(this.root));
+    return JSON.parse(JSON.stringify(this.root)); //el stingify le quita lo divertido al hacer una copia del arbol como lo harias si no tuvieras el stingify ?
   }
 
-  getElementsArray() {
+  getElementsArray() { //duda aca veo lo que quierees hacer es un arreglo a partir de tu arbol ??
+    
     if (this.root == null) {
       return [];
     }
@@ -76,7 +77,7 @@ class Tree {
     var arr = [currentNode.dato]; // Este array son los elemento que va pisando
     var steps = [currentNode.dato]; // Este son los pasos que ha seguido, para que sepa regresarse
 
-    while (copyRoot.left || copyRoot.right) {
+    while (copyRoot.left || copyRoot.right) { 
       if (currentNode.left != null) {
         currentNode = currentNode.left;
         arr.push(currentNode.dato);
@@ -135,7 +136,7 @@ class Tree {
 }
 
 function sonIguales(a, b) {
-  return JSON.stringify(a) == JSON.stringify(b);
+  return JSON.stringify(a) == JSON.stringify(b); //lo mismo aca jajaja
 }
 
 var a = new Tree();
